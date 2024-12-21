@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", serif;
+  font-weight: 400;
+}
+
+/* banner navigation button design */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px !important;
+  height: 50px !important;
+  color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.555);
+  transition: all .3s ease-in-out;
+  border-radius: 100%;
+}
+
+.swiper-button-prev {
+  left: 40px !important;
+}
+
+.swiper-button-next {
+  right: 40px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '' !important;
+  background-image: url("../src/assets/angle-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px !important;
+  height: 15px !important;
+  margin-left: 8px;
+}
+
+.swiper-button-prev::after {
+  background-image: url("../src/assets/angle-left.png");
+  margin-left: 6px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #512ec3;
+  color: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 30px !important;
+  background-color: #a6a6a8 !important;
+  opacity: 1 !important;
+  transition: all .3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #512ec3 !important;
+  width: 30px !important;
+}
+
+.hover_sub:hover ul {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* tab style */
+.react-tabs__tab {
+  border: none !important;
+  background-color: #ddd !important;
+}
+
+.react-tabs__tab--selected {
+  border: none !important;
+  background-color: #282828 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+/* text editor */
+.ql-editor {
+  font-size: 16px !important;
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #fff;
+}
+
+.ql-toolbar {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: #fff;
+}
+
+.ql-container {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  min-height: 10rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#create-product h1 {
+  font-size: xx-large;
+}
+
+#create-product h2 {
+  font-size: x-large;
+}
+
+#create-product h3 {
+  font-size: larger;
+}
+
+#create-product h4 {
+  font-size: large;
+}
+
+#create-product h5 {
+  font-size: medium;
+}
+
+#create-product h6 {
+  font-size: small;
+}
+
+/* image-gallery */
+.image-gallery-swipe {
+  background-color: #f6f6f6 !important;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  padding: 0 !important;
+  background: #fff !important;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd !important;
+  border-radius: 100%;
+  filter: none !important;
+  box-shadow: 0px 16px 48px rgba(39, 39, 39, 0.1) !important;
+}
+
+.image-gallery-left-nav {
+  left: 40px !important;
+}
+
+.image-gallery-right-nav {
+  right: 40px !important;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 40px !important;
+  width: 40px !important;
+  color: #727272;
+  display: inline !important;
+  filter: drop-shadow(0 2px 2px #1a1a1a);
+}
+
+.image-gallery-thumbnail {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border-color: #727272 !important;
+}
+
+.image-gallery-thumbnail:hover {
+  border-color: #727272 !important;
+}
+
+/* page loader */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side, #000 94%, #0000) right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+}
+
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes l24 {
+  100% {
+    background-position: left
+  }
+}
