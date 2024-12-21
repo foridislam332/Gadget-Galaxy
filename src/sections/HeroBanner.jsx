@@ -38,7 +38,7 @@ const BannerSliderSkeleton = () => {
 const HeroBanner = () => {
     const loading = false;
     return (
-        <section className="bg-white mx-4 my-6 rounded-xl overflow-hidden duration-300">
+        <section className="bg-white my-6 rounded-xl overflow-hidden duration-300">
             <Swiper
                 slidesPerView={1}
                 spaceBetween={0}
@@ -51,6 +51,7 @@ const HeroBanner = () => {
                 grabCursor={true}
                 pagination={{
                     clickable: true,
+                    el: '.swiper-pagination',
                 }}
                 loop
                 navigation={true}
@@ -81,6 +82,7 @@ const HeroBanner = () => {
                         </SwiperSlide>
                     </>
                 }
+                <div className="swiper-pagination hidden md:inline-block"></div>
             </Swiper>
         </section>
     );
