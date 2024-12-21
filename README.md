@@ -92,7 +92,7 @@ Gadget Galaxy is a multi-vendor e-commerce website where buyers can easily purch
    npm start dev
    ```
 
-6. Open your browser and visit `http://localhost:3000`.
+6. Open your browser and visit `http://localhost:5173/`.
 
 ---
 
